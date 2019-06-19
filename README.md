@@ -6,7 +6,7 @@ But after some bugs of which I must be the source, I keep the really good Eric's
 
 Very useful, fast and reproductible.
 
-## First, install  Wget
+### First, install  Wget
 
 Run this in your terminal to know if you have already `Wget`:
 
