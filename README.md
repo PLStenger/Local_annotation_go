@@ -75,4 +75,40 @@ evm.model.scaffold1000size145372.7	GO:0005737 GO:0004418 GO:0006783 GO:0018160 G
 
 Enjoy !
 
+### How it's work ?
+
+- First, for each transcript and each UniProt associated terms, informations are kept in a file. The whole webpage of UniPort results for the UniProt associated term (ex: ABCB6_RAT) if print in the same file. So, a same number of file is created than the number of line you have in your `transcipts_and_uniprot_list.txt` file.
+
+EX:
+
+```
+evm.model.scaffold1000size145372.14
+ID   ABCB6_RAT               Reviewed;         836 AA.
+AC   O70595;
+DT   12-DEC-2006, integrated into UniProtKB/Swiss-Prot.
+DT   01-AUG-1998, sequence version 1.
+DT   08-MAY-2019, entry version 138.
+DE   RecName: Full=ATP-binding cassette sub-family B member 6, mitochondrial;
+DE   AltName: Full=Ubiquitously-expressed mammalian ABC half transporter;
+GN   Name=Abcb6; Synonyms=Umat;
+
+...
+
+DR   Proteomes; UP000002494; Chromosome 9.
+DR   Bgee; ENSRNOG00000018697; Expressed in 9 organ(s), highest expression level in skeletal muscle tissue.
+DR   ExpressionAtlas; O70595; baseline and differential.
+DR   Genevisible; O70595; RN.
+DR   GO; GO:0005829; C:cytosol; IEA:Ensembl.
+DR   GO; GO:0005783; C:endoplasmic reticulum; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005768; C:endosome; ISS:UniProtKB.
+
+...
+```
+
+- Then, the transcript name (ex: `evm.model.scaffold1000size145372.14`) is grepped with all the GO terms (`grep -E ^DR\s+GO`) and put in other file.
+
+- All files are cleaned and concatenated. Then, we kept only unique transcripts names with `awk F[$1]++ {$1=OFS}1`. All GO terms for this all transcripts we the same name are concatenated. Then, we cleaned the Go terms with remove the duplicates.
+
+And that's it ! :) 
+
 
