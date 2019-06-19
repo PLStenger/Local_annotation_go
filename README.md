@@ -8,7 +8,7 @@ Very useful, fast and reproductible.
 
 ## First, install  Wget
 
-Run this in your terminal tp know if you have already `Wget`:
+Run this in your terminal to know if you have already `Wget`:
 
 ```
 wget
