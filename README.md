@@ -2,7 +2,7 @@
 Create your own GO (Gene Ontology) annotation from UniProt informations in your local terminal.
 
 The original idea where found here: https://github.com/enormandeau/go_enrichment
-But after some bugs of which I must be the source, I keep the really good Eric's idea to "web-scrapping" UniProt, and I adapt it to my datas.
+But after some bugs of which I must be the source (may be this code is only for Linux synthax, not Mac OSX), I keep the really good Eric's idea to "web-scrapping" UniProt, and I adapt it to my datas.
 
 Very useful, fast and reproductible.
 
