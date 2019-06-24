@@ -111,4 +111,19 @@ DR   GO; GO:0005768; C:endosome; ISS:UniProtKB.
 
 And that's it ! :) 
 
+## Update 2019/10/24 : You can now add the gene's name !
+
+Same instructions than above, but run only the `01_run_me_first_for_gene_s_name.sh`.
+
+This will give you a `annotation_gene_named.txt` file with:
+
+```
+evm.model.scaffold1000size145372.14	 RecName: Full=ABC transporter B family member 25, mitochondrial;Short=ABC transporter ABCB.25; Short=AtABCB25; AltName: Full=ABC transporter of the mitochondrion 3; Short=AtATM3;Short=Iron-sulfur clusters transporter ATM3; AltName: Full=Protein STARIK 1; Flags: Precursor; RecName: Full=ATP-binding cassette sub-family B member 6, mitochondrial; AltName: Full=Mitochondrial ABC transporter 3; Short=Mt-ABC transporter 3; AltName: Full=P-glycoprotein-related protein;
+evm.model.scaffold1000size145372.20	 RecName: Full=Protein unc-50 homolog; AltName: Full=Periodontal ligament-specific protein 22; Short=PDLs22; AltName: Full=Protein GMH1 homolog; Short=hGMH1; AltName: Full=Uncoordinated-like protein;RecName: Full=Protein unc-50 homolog; AltName: Full=Periodontal ligament-specific protein 22;RecName: Full=Protein unc-50 homolog; AltName: Full=Uncoordinated-like protein;
+```
+
+
+
+
+
 
