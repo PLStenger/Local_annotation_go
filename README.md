@@ -111,7 +111,7 @@ DR   GO; GO:0005768; C:endosome; ISS:UniProtKB.
 
 And that's it ! :) 
 
-## Update 2019/10/24 : You can now add the gene's name !
+## Update 2019/06/24 : You can now add the gene's name !
 
 Same instructions than above, but run only the `01_run_me_first_for_gene_s_name.sh`.
 
@@ -122,8 +122,22 @@ evm.model.scaffold1000size145372.14	 RecName: Full=ABC transporter B family memb
 evm.model.scaffold1000size145372.20	 RecName: Full=Protein unc-50 homolog; AltName: Full=Periodontal ligament-specific protein 22; Short=PDLs22; AltName: Full=Protein GMH1 homolog; Short=hGMH1; AltName: Full=Uncoordinated-like protein;RecName: Full=Protein unc-50 homolog; AltName: Full=Periodontal ligament-specific protein 22;RecName: Full=Protein unc-50 homolog; AltName: Full=Uncoordinated-like protein;
 ```
 
+## Update 2019/06/26 : You can now apply the annotation on cluster !
 
+Create your directory in your `$SCRATCH`.
+ex: `/home1/scratch/plstenge/annotation_GO`
+Put your `transcipts_and_uniprot_list.txt` into this folder and the `cluster_annotation_go.sh` script.
 
+Run `qsub -I -q ftp -l walltime=48:00:00` to enter in the node connected to internet (the web-srapping will work into it).
+
+And then,
+```
+cd $SCRATCH//annotation_GO
+bash cluster_annotation_go.sh
+bash 02_run_me_second.sh
+ls -1 | wc -l ## To know the number of files created
+bash 03_run_me_third.sh
+```
 
 
 
